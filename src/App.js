@@ -7,6 +7,7 @@ import './index.css';
 import img from './assets/images/lhss_33333.jpg';
 import tech from './assets/images/tech@2x.png';
 import tech_inv from './assets/images/tech_inv@2x.png';
+import profile from './assets/images/profile2.jpg';
 import { FaHome } from 'react-icons/fa';
 import { FaAddressBook } from 'react-icons/fa';
 import { FaUser } from 'react-icons/fa';
@@ -47,13 +48,16 @@ function App() {
       </nav>
 
       <header className="header" id="header">
-        <h1>Bem-vindo à Minha Landing Page</h1>
-        {/*<img src={tech_inv} className="img_banner" />*/}
+        <div>
+          <h1>LUCAS HENRIQUE SERRANO SOARES</h1>
+          {/*<img src={profile} className="img_profile" />*/}
+        </div>
+        <img src={tech_inv} className="img_banner" />
       </header>
         
-      <div>
-        <img src={tech} className="img_banner"/>
-      </div>
+      {/*<div>*/}
+      {/*  <img src={tech} className="img_banner"/>*/}
+      {/*</div>*/}
         
       {/* Seção Sobre Mim com animação */}
       <motion.section
@@ -64,6 +68,7 @@ function App() {
         transition={{ duration: 0.6 }}
       >
         <h2>Sobre Mim</h2>
+        <img src={profile} className="img_profile" />
         <p>
               Sou estudante de Sistemas para Internet (6º período) no Instituto Federal da Paraíba (IFPB) com experiência em desenvolvimento front-end,
               e estou em busca de oportunidades de estágio na área de Desenvolvimento Front-End,

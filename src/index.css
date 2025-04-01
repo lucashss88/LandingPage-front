@@ -97,6 +97,10 @@ section {
   width: 98%;
 }
 
+.img_profile{
+  width: 10%;
+}
+
 .about {
   font-size: 18px;
   color: #333;
