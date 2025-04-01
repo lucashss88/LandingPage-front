@@ -5,7 +5,7 @@ import img from './assets/images/tech@2x.png';
 import nt from './assets/images/Captura de tela 2024-09-13 142836.png';
 import ntPopup from './assets/images/Captura de tela 2024-08-19 114610.png';
 import ntPopup2 from './assets/images/Captura de tela 2024-10-09 102057.png';
-import gf from './assets/images/Captura de tela 2024-10-14 202726.png';
+import gf from './assets/images/Captura de tela 2025-04-01 152504.png';
 import gymfit from './assets/images/Captura de tela 2024-10-14 202747.png';
 import gymfit2 from './assets/images/Captura de tela 2024-10-14 202804.png';
 import { FaAngleLeft } from 'react-icons/fa';
@@ -23,7 +23,7 @@ const projects = [
         image: nt,
         imagePopup: ntPopup,
         imagePopup2: ntPopup2,
-        deployLink: 'https://nutri-track-front.vercel.app'
+        // deployLink: 'https://nutri-track-front.vercel.app'
     },
     {
         id: 2,
@@ -36,7 +36,7 @@ const projects = [
         image: gf,
         imagePopup: gymfit,
         imagePopup2: gymfit2,
-        deployLink: 'https://gym-prive-front.vercel.app'
+        // deployLink: 'https://gym-prive-front.vercel.app'
     },
 ];
 
@@ -109,7 +109,7 @@ const ProjectCarousel = () => {
                                 <img src={projects[currentProject].imagePopup2} alt="Imagem do Projeto" />
                             </div>
                             <p>{projects[currentProject].description}</p>
-                            <a href={projects[currentProject].deployLink} target="_blank" rel="noopener noreferrer">Ver Deploy</a>
+                            {/*<a href={projects[currentProject].deployLink} target="_blank" rel="noopener noreferrer">Ver Deploy</a>*/}
                         </div>
                         <button onClick={closePopup}>Fechar</button>
                     </div>
