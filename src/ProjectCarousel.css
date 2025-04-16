@@ -95,9 +95,10 @@
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    width: 100%;
-    max-width: 800px;
-    max-height: 800px;
+    width: 90%;
+    max-width: 1000px; /* era 800px */
+    max-height: 90vh;   /* para evitar scroll da página inteira */
+    overflow-y: auto;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -146,6 +147,15 @@
     align-items: center;
 }
 
-.div_project_img{
-    flex-direction: row;
+.div_project_img {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.div_project_img img {
+    width: 45%;
+    height: auto;
+    border-radius: 4px;
 }

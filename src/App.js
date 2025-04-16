@@ -70,9 +70,9 @@ function App() {
         <h2>Sobre Mim</h2>
         <img src={profile} className="img_profile" />
         <p>
-              Sou estudante de Sistemas para Internet (6º período) no Instituto Federal da Paraíba (IFPB) com experiência em desenvolvimento front-end,
-              e estou em busca de oportunidades de estágio na área de Desenvolvimento Front-End,
-              tanto para web quanto para mobile, para aplicar e expandir minhas habilidades em projetos inovadores.
+            Sou estudante do último período de Tecnologia em Sistemas para Internet (IFPB), com experiência prática em desenvolvimento front-end e projetos fullstack.
+            Tenho interesse em atuar com tecnologias como React, Node.js e PostgreSQL. Durante meu estágio, desenvolvi interfaces e sistemas com foco em usabilidade,
+            colaboração em equipe e boas práticas ágeis. Busco oportunidades para continuar aprendendo e contribuindo com soluções inovadoras, tanto no desenvolvimento web quanto mobile.
         </p>
         <h2>Experiências</h2>
         <p>
@@ -86,25 +86,37 @@ function App() {
         <div className="list_tec">
             <ul>
                 <li>
-                    Linguagens de Programação: JavaScript, TypeScript, Kotlin, Java.
+                    Linguagens de Programação<br />
+                    - JavaScript e TypeScript: Usados em projetos com React e Node.js.<br />
+                    - Kotlin: Utilizado em projeto mobile (disciplinar) com Android Studio.<br />
+                    - Java: Conhecimento básico obtido em disciplinas da graduação.<br />
                 </li>
                 <li>
-                    Frameworks e Bibliotecas: Angular, ReactJS, VueJS.
+                    Frameworks e Bibliotecas<br />
+                    - ReactJS: Aplicado no estágio (armário inteligente) e em projetos pessoais.<br />
+                    - VueJS: Utilizado em parte do sistema desenvolvido no estágio.<br />
+                    - Angular: Conhecimento obtido em projetos acadêmicos e cursos.<br />
                 </li>
                 <li>
-                    Desenvolvimento Mobile: Android Studio, React Native.
+                    Desenvolvimento Mobile<br />
+                    - Android Studio e Kotlin: Projeto final de disciplina de Programação Mobile.<br />
+                    - React Native: Em fase de estudo, com base na experiência com React.<br />
                 </li>
                 <li>
-                    Web Design: HTML, CSS, Tailwind, Bootstrap.
+                    Web Design<br />
+                    - HTML, CSS, Tailwind, Bootstrap: Utilizados em interfaces de diversos projetos.
                 </li>
                 <li>
-                    Bancos de Dados: MySQL, PostgreSQL.
+                    Bancos de Dados<br />
+                    - MySQL e PostgreSQL: Usados em projetos acadêmicos e pessoais (NutriTrack/FitTrack).
                 </li>
                 <li>
-                    Controle de Versão: Git (GitHub, GitLab).
+                    Controle de Versão<br />
+                    - Git, GitHub, GitLab: Versionamento e colaboração em todos os projetos.
                 </li>
                 <li>
-                    Metodologias Ágeis: Scrum.
+                    Metodologias Ágeis<br />
+                    - Scrum e Kanban: Aplicados no estágio (Trello) e em projetos da graduação.
                 </li>
             </ul>
         </div>

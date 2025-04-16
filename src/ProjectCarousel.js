@@ -16,10 +16,14 @@ const projects = [
         id: 1,
         title: 'Nutritrack',
         description: 'O NutriTrack é um sistema desenvolvido para auxiliar nutricionistas e pacientes no gerenciamento de' +
-            ' dietas e informações nutricionais. O projeto inclui funcionalidades como o cadastro de alimentos, criação de dietas personalizadas,' +
-            ' e acompanhamento de refeições. Nutricionistas podem criar, editar e monitorar dietas dos pacientes,' +
-            ' enquanto os pacientes têm acesso aos seus planos alimentares e podem visualizar suas dietas de forma detalhada.' +
-            ' O sistema visa otimizar a interação entre profissionais e pacientes, facilitando o controle e planejamento nutricional de maneira eficiente.',
+            ' dietas e informações nutricionais. Permite o cadastro de alimentos, criação de dietas personalizadas, substituição de refeições e visualização detalhada por parte dos pacientes.\n' +
+            '\n' +
+            'Tecnologias utilizadas:\n' +
+            'Tecnologias: React (Router, Hooks), Tailwind, Node.js, Express, JWT, PostgreSQL (Sequelize).\n' +
+            '\n' +
+            'Repositórios:\n' +
+            '- Frontend:\n' +
+            '- Backend:',
         image: nt,
         imagePopup: ntPopup,
         imagePopup2: ntPopup2,
@@ -28,11 +32,12 @@ const projects = [
     {
         id: 2,
         title: 'FitTrack',
-        description: 'O FitTrack é um sistema de gerenciamento de treinos, voltado para auxiliar usuários na organização e' +
-            ' acompanhamento de suas rotinas de exercícios físicos.' +
-            ' Com funcionalidades como a criação de treinos personalizados e edição de perfis,' +
-            ' o projeto visa oferecer uma plataforma prática e intuitiva para quem deseja otimizar suas atividades físicas.' +
-            ' Desenvolvido para web e mobile, o FitTrack busca facilitar o acesso e o controle dos treinos em qualquer lugar.',
+        description: 'O FitTrack é uma plataforma web/mobile para organização de treinos e atividades físicas, com criação de treinos personalizados e edição de perfil.\n' +
+            'Tecnologias: React (Router, Hooks), Tailwind CSS, Node.js, Express, JWT, PostgreSQL (Sequelize).\n'+
+            '\n' +
+            'Repositórios:\n' +
+            '- Frontend:\n' +
+            '- Backend:',
         image: gf,
         imagePopup: gymfit,
         imagePopup2: gymfit2,
@@ -108,7 +113,17 @@ const ProjectCarousel = () => {
                                 <img src={projects[currentProject].imagePopup} alt="Imagem do Projeto" />
                                 <img src={projects[currentProject].imagePopup2} alt="Imagem do Projeto" />
                             </div>
-                            <p>{projects[currentProject].description}</p>
+                            <div className="project-description" style={{
+                                maxHeight: '160px',
+                                overflowY: 'auto',
+                                fontSize: '0.85rem',
+                                lineHeight: '1.3',
+                                paddingRight: '0.5rem',
+                                textAlign: 'center',
+                                whiteSpace: 'pre-line'
+                            }}>
+                                {projects[currentProject].description}
+                            </div>
                             {/*<a href={projects[currentProject].deployLink} target="_blank" rel="noopener noreferrer">Ver Deploy</a>*/}
                         </div>
                         <button onClick={closePopup}>Fechar</button>
