@@ -6,42 +6,6 @@ body {
   line-height: 1.6;
 }
 
-.navbar {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  width: 98%;
-}
-
-.navbar li{
-  margin-right: 15px;
-}
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-.navbar li a {
-  color: white;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.header {
-  background-color: #333;
-  color: #fff;
-  margin-bottom: 10px;
-  padding: 2rem;
-  text-align: center;
-  margin-top: 60px;
-}
-
 section {
   padding: 2rem;
   margin: 1rem;
@@ -74,10 +38,6 @@ section {
   font-weight: bold;
 }
 
-.projects{
-
-}
-
 .contact a {
   color: #0073e6;
   text-decoration: none;
@@ -94,7 +54,7 @@ section {
 .img_banner {
   image-orientation: from-image;
   image-resolution: normal;
-  width: 98%;
+  width: 80%;
 }
 
 .img_profile{

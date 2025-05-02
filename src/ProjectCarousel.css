@@ -8,12 +8,12 @@
 
 .carousel {
     display: flex;
-    transition: transform 0.5s ease-in-out;
 }
 
 .project-card {
     flex: 100%;
     max-width: 100%;
+    max-height: 70%;
     padding: 20px;
     cursor: pointer;
     text-align: center;
@@ -22,45 +22,12 @@
     margin: 10px;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
 }
 
 .project-card img {
     width: 60%;
     height: auto;
     border-radius: 4px;
-}
-
-
-.carousel-controls {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.carousel-controls a {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.carousel-controls a:hover {
-    background-color: #3333;
-    color: black;
-}
-
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
 }
 
 .carousel-indicators span {
@@ -110,36 +77,21 @@
     border-radius: 4px;
 }
 
-.popup-content a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #333;
-    text-decoration: none;
-    border: 1px solid #333;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-}
+/*.popup-content a {*/
+/*    display: inline-block;*/
+/*    margin-top: 10px;*/
+/*    color: #333;*/
+/*    text-decoration: none;*/
+/*    border: 1px solid #333;*/
+/*    padding: 5px 10px;*/
+/*    border-radius: 4px;*/
+/*    transition: background-color 0.3s, color 0.3s;*/
+/*}*/
 
-.popup-content a:hover {
-    background-color: #333;
-    color: white;
-}
-
-.popup-content button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.popup-content button:hover {
-    background-color: #c82333;
-}
+/*.popup-content a:hover {*/
+/*    background-color: #333;*/
+/*    color: white;*/
+/*}*/
 
 .div_project{
     display: flex;
