@@ -4,6 +4,7 @@
     max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
+    color: black;
 }
 
 .carousel {
@@ -17,7 +18,7 @@
     padding: 20px;
     cursor: pointer;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 3px solid #61dafb;
     border-radius: 8px;
     margin: 10px;
     background-color: white;

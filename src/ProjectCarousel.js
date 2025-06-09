@@ -111,7 +111,9 @@ const ProjectCarousel = () => {
             </motion.div>
 
             <div className="carousel-controls mt-2 d-flex justify-content-between">
+                {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
                 <a onClick={handlePrevProject} className="btn btn-dark carousel-control-prev-icon p-3 rounded-2 me-3" />
+                {/* eslint-disable-next-line jsx-a11y/anchor-has-content */}
                 <a onClick={handleNextProject} className="btn btn-dark carousel-control-next-icon p-3 rounded-2 ms-3" />
             </div>
 
