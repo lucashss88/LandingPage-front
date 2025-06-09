@@ -10,7 +10,7 @@ export default function Navbar() {
     return (
         <nav className="bg-dark text-white fixed top-0 w-100 shadow z-3">
             <div className="container d-flex justify-content-between align-items-center py-3">
-                <div className="fw-bold fs-4">Meu Portfólio</div>
+                <div className="fw-bold fs-4">Lucas Henrique Serrano Soares</div>
 
                 {/* Menu desktop */}
                 <ul className="d-none d-md-flex gap-4 list-unstyled mb-0 align-items-center">

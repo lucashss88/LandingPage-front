@@ -1,87 +1,105 @@
 // src/App.js
 import React from 'react';
 import {motion} from 'framer-motion';
-import './App.css';
-import './index.css';
+import './styles/App.css';
+import './styles/index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import tech_inv from './assets/images/tech_inv@2x.png';
 import profile from './assets/images/profile2.jpg';
-import ProjectCarousel from './ProjectCarousel';
-import Navbar from "./Navbar";
+import ProjectCarousel from './components/ProjectCarousel';
+import Navbar from "./components/Navbar";
+import useIsDesktop from "./components/useIsDesktop";
 
 function App() {
 
+    const isDesktop = useIsDesktop();
     return (
         <div className="App">
             <Navbar />
             <header id="header" className="text-center p-5 mb-2">
                 {/* eslint-disable-next-line jsx-a11y/alt-text */}
-                <img src={tech_inv} className="img_banner"/>
+                <img className="img_banner" alt="Banner"/>
             </header>
             <div className="px-3 px-md-5 text-white">
                 <motion.section
                     className="about"
                     id="sobre-mim"
-                    initial={{opacity: 0, y: 50}}
-                    whileInView={{opacity: 1, y: 0}}
-                    transition={{duration: 0.6}}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{once: true, amount: 0.3}}
+                    transition={{duration: 1}}
                 >
-                    <h2>Sobre Mim</h2>
-                    <img src={profile} className="img_profile rounded-5 mb-3 ms-4" alt={profile}/>
+                    <motion.div
+                        variants={isDesktop ? {
+                            hidden: {opacity: 0, x: -100},
+                            visible: {opacity: 1, x: 0}
+                        } : false}
+                        transition={{duration: 2}}
+                    >
+                        <h2>Sobre Mim</h2>
+                        <img src={profile} className="img_profile rounded-5 mb-3 ms-4" alt={profile}/>
+                    </motion.div>
                     <p>
-                        Sou estudante do último período de Tecnologia em Sistemas para Internet (IFPB), com experiência
-                        prática em desenvolvimento front-end e projetos fullstack.
-                        Tenho interesse em atuar com tecnologias como React, Node.js e PostgreSQL. Durante meu estágio,
-                        desenvolvi interfaces e sistemas com foco em usabilidade,
-                        colaboração em equipe e boas práticas ágeis. Busco oportunidades para continuar aprendendo e
-                        contribuindo com soluções inovadoras, tanto no desenvolvimento web quanto mobile.
+                        Sou formado em Tecnologia em Sistemas para Internet pelo IFPB e atualmente curso pós-graduação com foco em desenvolvimento de software.
+                        Tenho me capacitado como desenvolvedor full stack, com forte experiência em back-end utilizando Node.js, Express e Sequelize, além de habilidades consolidadas em React para o front-end.
+                        Durante minhas experiências profissionais, participei do desenvolvimento de sistemas com foco em usabilidade, performance e boas práticas ágeis, sempre colaborando em equipe.
+                        Busco oportunidades para aplicar meu conhecimento em projetos inovadores, tanto no desenvolvimento web quanto mobile, e continuar evoluindo como profissional da área de tecnologia.
+
                     </p>
-                    <h2>Experiências</h2>
+                    <motion.div
+                        variants={isDesktop ? {
+                            hidden: {opacity: 0, x: -100},
+                            visible: {opacity: 1, x: 0}
+                        } : false}
+                        transition={{duration: 2}}
+                    >
+                        <h2>Experiências</h2>
+                    </motion.div>
                     <p>
-                        Durante meu estágio na Assert IFPB, desenvolvi interfaces de usuário para aplicações web utilizando
-                        TypeScript,
-                        HTML, CSS e React. Participei do desenvolvimento de um armário inteligente, contribuindo com
-                        soluções criativas
-                        para otimizar a experiência do usuário. Trabalhei em uma equipe ágil,
-                        utilizando Git para controle de versão e Scrum para organização e monitoramento das atividades no
-                        Trello,
-                        aprimorando minhas habilidades de colaboração e trabalho em equipe.
+                        Durante meu estágio na Assert IFPB, atuei como desenvolvedor front-end no projeto de um armário inteligente, construindo interfaces web com React, TypeScript, HTML e CSS.
+                        Utilizei hooks do React, como useState e useEffect, e trabalhei com React Router para navegação entre componentes. A experiência foi realizada em um ambiente ágil, com uso de Scrum, organização via Trello e versionamento com Git.
+                        <br></br><br></br>Mais recentemente, participei como estagiário full stack na Sibit Soluções Digitais, contribuindo para o desenvolvimento de uma API voltada ao gerenciamento de planos alimentares,
+                        utilizando Node.js com JavaScript no back-end. Também desenvolvi uma aplicação web com React, priorizando uma interface limpa e funcional.
+                        Essa experiência consolidou meu domínio do ecossistema JavaScript e fortaleceu minha base em arquitetura back-end.
+
                     </p>
-                    <h2>Habilidades e tecnologias</h2>
+                    <motion.div
+                        variants={isDesktop ? {
+                            hidden: {opacity: 0, x: -50},
+                            visible: {opacity: 1, x: 0}
+                        } : false}
+                        transition={{duration: 2}}
+                    >
+                        <h2>Habilidades e tecnologias</h2>
+                    </motion.div>
                     <div className="list_tec">
                         <ul>
                             <li>
-                                Linguagens de Programação<br/>
-                                - JavaScript e TypeScript: Usados em projetos com React e Node.js.<br/>
-                                - Kotlin: Utilizado em projeto mobile (disciplinar) com Android Studio.<br/>
-                                - Java: Conhecimento básico obtido em disciplinas da graduação.<br/>
+                                <strong>Linguagens de Programação</strong><br/>
+                                - JavaScript e TypeScript: Utilizados amplamente em projetos com React e Node.js.<br/>
+                                - Java: Utilizando Spring boot em projetos e aulas da pós graduação.
                             </li>
                             <li>
-                                Frameworks e Bibliotecas<br/>
-                                - ReactJS: Aplicado no estágio (armário inteligente) e em projetos pessoais.<br/>
-                                - VueJS: Utilizado em parte do sistema desenvolvido no estágio.<br/>
-                                - Angular: Conhecimento obtido em projetos acadêmicos e cursos.<br/>
+                                <strong>Front-end</strong><br/>
+                                - ReactJS: Utilizado no estágio e em projetos pessoais, com uso de hooks e React Router.<br/>
+                                - HTML, CSS, Tailwind e Bootstrap: Aplicados no desenvolvimento de interfaces modernas e responsivas.
                             </li>
                             <li>
-                                Desenvolvimento Mobile<br/>
-                                - Android Studio e Kotlin: Projeto final de disciplina de Programação Mobile.<br/>
-                                - React Native: Em fase de estudo, com base na experiência com React.<br/>
+                                <strong>Back-end</strong><br/>
+                                - Node.js e Express: Experiência prática no desenvolvimento de APIs REST com autenticação e middlewares.<br/>
+                                - Sequelize ORM: Utilizado para manipulação de banco de dados com PostgreSQL e MySQL.<br/>
+                                - Spring Boot: Utilizado para desenvolvimento de APIs REST com Java.
                             </li>
                             <li>
-                                Web Design<br/>
-                                - HTML, CSS, Tailwind, Bootstrap: Utilizados em interfaces de diversos projetos.
+                                <strong>Bancos de Dados</strong><br/>
+                                - PostgreSQL e MySQL: Utilizados em sistemas acadêmicos e projetos pessoais.
                             </li>
                             <li>
-                                Bancos de Dados<br/>
-                                - MySQL e PostgreSQL: Usados em projetos acadêmicos e pessoais (NutriTrack/FitTrack).
+                                <strong>Versionamento</strong><br/>
+                                - Git, GitHub e GitLab: Controle de versão e colaboração em todos os projetos realizados.
                             </li>
                             <li>
-                                Controle de Versão<br/>
-                                - Git, GitHub, GitLab: Versionamento e colaboração em todos os projetos.
-                            </li>
-                            <li>
-                                Metodologias Ágeis<br/>
-                                - Scrum e Kanban: Aplicados no estágio (Trello) e em projetos da graduação.
+                                <strong>Metodologias Ágeis</strong><br/>
+                                - Scrum e Kanban: Práticas aplicadas durante os estágios e em projetos de equipe com Trello.
                             </li>
                         </ul>
                     </div>

@@ -59,6 +59,14 @@ section {
   width: 80%;
   max-height: 250px;
   object-fit: contain;
+  content: url('../assets/images/tech2025_inv3@4x.png');
+}
+
+@media (max-width: 768px) {
+  .img_banner {
+    content: url('../assets/images/tech2025_mobile3@4x.png'); /* Caminho da imagem mobile */
+    max-height: 180px;
+  }
 }
 
 .img_profile{

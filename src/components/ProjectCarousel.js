@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import './ProjectCarousel.css';
-import nt from './assets/images/Captura de tela 2024-09-13 142836.png';
-import ntPopup from './assets/images/Captura de tela 2024-08-19 114610.png';
-import ntPopup2 from './assets/images/Captura de tela 2024-10-09 102057.png';
-import gf from './assets/images/Captura de tela 2025-04-01 152504.png';
-import gymfit from './assets/images/Captura de tela 2024-10-14 202747.png';
-import gymfit2 from './assets/images/Captura de tela 2024-10-14 202804.png';
-import sf from './assets/images/Captura de tela 2025-04-29 114635.png';
-import studyflow from './assets/images/Captura de tela 2025-04-29 114729.png';
-import studyflow2 from './assets/images/Captura de tela 2025-04-29 114754.png';
+import '../styles/ProjectCarousel.css';
+import nt from '../assets/images/Captura de tela 2024-09-13 142836.png';
+import ntPopup from '../assets/images/Captura de tela 2024-08-19 114610.png';
+import ntPopup2 from '../assets/images/Captura de tela 2024-10-09 102057.png';
+import gf from '../assets/images/Captura de tela 2025-04-01 152504.png';
+import gymfit from '../assets/images/Captura de tela 2024-10-14 202747.png';
+import gymfit2 from '../assets/images/Captura de tela 2024-10-14 202804.png';
+import sf from '../assets/images/Captura de tela 2025-04-29 114635.png';
+import studyflow from '../assets/images/Captura de tela 2025-04-29 114729.png';
+import studyflow2 from '../assets/images/Captura de tela 2025-04-29 114754.png';
 
 const projects = [
     {
