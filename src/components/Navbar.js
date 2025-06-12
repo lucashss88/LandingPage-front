@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { FaHome, FaUser, FaDesktop, FaAddressBook, FaBars, FaTimes } from "react-icons/fa";
+import PersonIcon from '@mui/icons-material/Person'; // Para "Sobre mim"
+import FolderOpenIcon from '@mui/icons-material/FolderOpen'; // Para "Projetos"
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import {FaBars, FaTimes} from "react-icons/fa"; // Para "Contate-me"
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -15,26 +18,20 @@ export default function Navbar() {
                 {/* Menu desktop */}
                 <ul className="d-none d-md-flex gap-4 list-unstyled mb-0 align-items-center">
                     <li>
-                        <Link to="header" smooth={true} duration={500} className="text-white d-flex align-items-center gap-2 cursor-pointer icon">
-                            <FaHome className="icons" />
-                            HOME
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="sobre-mim" smooth={true} duration={500} className="text-white d-flex align-items-center gap-2 cursor-pointer icon">
-                            <FaUser className="icons" />
+                        <Link to="sobre-mim" smooth={true} duration={500} className="d-flex align-items-center gap-2 cursor-pointer icon">
+                            <PersonIcon className="icons" />
                             SOBRE MIM
                         </Link>
                     </li>
                     <li>
-                        <Link to="projetos" smooth={true} duration={500} className="text-white icon d-flex align-items-center gap-2 cursor-pointer">
-                            <FaDesktop className="icons" />
+                        <Link to="projetos" smooth={true} duration={500} className="icon d-flex align-items-center gap-2 cursor-pointer">
+                            <FolderOpenIcon className="icons" />
                             PROJETOS
                         </Link>
                     </li>
                     <li>
-                        <Link to="contate-me" smooth={true} duration={500} className="text-white icon d-flex align-items-center gap-2 cursor-pointer">
-                            <FaAddressBook className="icons" />
+                        <Link to="contate-me" smooth={true} duration={500} className="icon d-flex align-items-center gap-2 cursor-pointer">
+                            <MailOutlineIcon className="icons" />
                             CONTATE-ME
                         </Link>
                     </li>
@@ -52,26 +49,20 @@ export default function Navbar() {
             {menuOpen && (
                 <ul className="d-flex flex-column text-center gap-4 py-3 bg-dark d-md-none list-unstyled ms-2 m-0">
                     <li>
-                        <Link to="header" smooth={true} duration={500} onClick={toggleMenu} className="text-white text-decoration-none d-flex justify-center align-items-center gap-2">
-                            <FaHome className="icons" />
-                            HOME
-                        </Link>
-                    </li>
-                    <li>
                         <Link to="sobre-mim" smooth={true} duration={500} onClick={toggleMenu} className="text-white text-decoration-none d-flex justify-center align-items-center gap-2">
-                            <FaUser className="icons" />
+                            <PersonIcon className="icons" />
                             SOBRE MIM
                         </Link>
                     </li>
                     <li>
                         <Link to="projetos" smooth={true} duration={500} onClick={toggleMenu} className="text-white text-decoration-none d-flex justify-center align-items-center gap-2">
-                            <FaDesktop className="icons" />
+                            <FolderOpenIcon className="icons" />
                             PROJETOS
                         </Link>
                     </li>
                     <li>
                         <Link to="contate-me" smooth={true} duration={500} onClick={toggleMenu} className="text-white text-decoration-none d-flex justify-center align-items-center gap-2">
-                            <FaAddressBook className="icons" />
+                            <MailOutlineIcon className="icons" />
                             CONTATE-ME
                         </Link>
                     </li>

@@ -8,7 +8,10 @@ import profile from './assets/images/profile2.jpg';
 import ProjectCarousel from './components/ProjectCarousel';
 import Navbar from "./components/Navbar";
 import useIsDesktop from "./components/useIsDesktop";
-
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import WorkIcon from '@mui/icons-material/Work'; // Para seções de experiência
+import CodeIcon from '@mui/icons-material/Code';
 function App() {
 
     const isDesktop = useIsDesktop();
@@ -21,19 +24,17 @@ function App() {
             </header>
             <div className="px-3 px-md-5 text-white">
                 <motion.section
-                    className="about"
+                    className="about animate-scale-in"
                     id="sobre-mim"
-                    initial="hidden"
                     whileInView="visible"
                     viewport={{once: true, amount: 0.3}}
-                    transition={{duration: 1}}
                 >
                     <motion.div
                         variants={isDesktop ? {
                             hidden: {opacity: 0, x: -100},
                             visible: {opacity: 1, x: 0}
                         } : false}
-                        transition={{duration: 2}}
+                        className="animate-scale-in"
                     >
                         <h2>Sobre Mim</h2>
                         <img src={profile} className="img_profile rounded-5 mb-3 ms-4" alt={profile}/>
@@ -50,59 +51,123 @@ function App() {
                             hidden: {opacity: 0, x: -100},
                             visible: {opacity: 1, x: 0}
                         } : false}
-                        transition={{duration: 2}}
+                        className="animate-fade-in-up"
                     >
                         <h2>Experiências</h2>
                     </motion.div>
-                    <p>
-                        Durante meu estágio na Assert IFPB, atuei como desenvolvedor front-end no projeto de um armário inteligente, construindo interfaces web com React, TypeScript, HTML e CSS.
-                        Utilizei hooks do React, como useState e useEffect, e trabalhei com React Router para navegação entre componentes. A experiência foi realizada em um ambiente ágil, com uso de Scrum, organização via Trello e versionamento com Git.
-                        <br></br><br></br>Mais recentemente, participei como estagiário full stack na Sibit Soluções Digitais, contribuindo para o desenvolvimento de uma API voltada ao gerenciamento de planos alimentares,
-                        utilizando Node.js com JavaScript no back-end. Também desenvolvi uma aplicação web com React, priorizando uma interface limpa e funcional.
-                        Essa experiência consolidou meu domínio do ecossistema JavaScript e fortaleceu minha base em arquitetura back-end.
-
-                    </p>
+                    <div className="row justify-content-center mt-2">
+                        <div className="col-md-6 mb-4 animate-fade-in-up delay-100">
+                            <div className="shadow-lg border-0 rounded-3 h-100 transition-300 hover-scale-105">
+                                <div className="p-4 bg-card">
+                                    <WorkIcon className="mb-3" style={{ fontSize: 50 }} />
+                                    <h3 className="h4 fw-bold mb-3">Estagiário Front-end na Assert IFPB</h3>
+                                    <p className="card-text text-center">
+                                        Atuei como desenvolvedor front-end no projeto de um armário inteligente, construindo interfaces web com React, TypeScript, HTML e CSS.
+                                        Utilizei hooks do React, como useState e useEffect, e trabalhei com React Router para navegação entre componentes.
+                                        A experiência foi realizada em um ambiente ágil, com uso de Scrum, organização via Trello e versionamento com Git.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 mb-4 animate-fade-in-up delay-100">
+                            <div className="shadow-lg border-0 rounded-3 h-100 transition-300 hover-scale-105">
+                                <div className="p-4 bg-card">
+                                    <WorkIcon className="mb-3" style={{ fontSize: 50 }} />
+                                    <h3 className="h4 fw-bold mb-3">Estagiário Full Stack na Sibit Soluções Digitais</h3>
+                                    <p className="card-text text-center">
+                                        Participei como estagiário full stack, contribuindo para o desenvolvimento de uma API voltada ao gerenciamento de planos alimentares, utilizando Node.js com JavaScript no back-end. Também desenvolvi uma aplicação web com React,
+                                        priorizando uma interface limpa e funcional. Essa experiência consolidou meu domínio do ecossistema JavaScript e fortaleceu minha base em arquitetura back-end.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <motion.div
                         variants={isDesktop ? {
                             hidden: {opacity: 0, x: -50},
                             visible: {opacity: 1, x: 0}
                         } : false}
-                        transition={{duration: 2}}
+                        className="animate-fade-in-up"
                     >
                         <h2>Habilidades e tecnologias</h2>
                     </motion.div>
-                    <div className="list_tec">
-                        <ul>
-                            <li>
-                                <strong>Linguagens de Programação</strong><br/>
-                                - JavaScript e TypeScript: Utilizados amplamente em projetos com React e Node.js.<br/>
-                                - Java: Utilizando Spring boot em projetos e aulas da pós graduação.
-                            </li>
-                            <li>
-                                <strong>Front-end</strong><br/>
-                                - ReactJS: Utilizado no estágio e em projetos pessoais, com uso de hooks e React Router.<br/>
-                                - HTML, CSS, Tailwind e Bootstrap: Aplicados no desenvolvimento de interfaces modernas e responsivas.
-                            </li>
-                            <li>
-                                <strong>Back-end</strong><br/>
-                                - Node.js e Express: Experiência prática no desenvolvimento de APIs REST com autenticação e middlewares.<br/>
-                                - Sequelize ORM: Utilizado para manipulação de banco de dados com PostgreSQL e MySQL.<br/>
-                                - Spring Boot: Utilizado para desenvolvimento de APIs REST com Java.
-                            </li>
-                            <li>
-                                <strong>Bancos de Dados</strong><br/>
-                                - PostgreSQL e MySQL: Utilizados em sistemas acadêmicos e projetos pessoais.
-                            </li>
-                            <li>
-                                <strong>Versionamento</strong><br/>
-                                - Git, GitHub e GitLab: Controle de versão e colaboração em todos os projetos realizados.
-                            </li>
-                            <li>
-                                <strong>Metodologias Ágeis</strong><br/>
-                                - Scrum e Kanban: Práticas aplicadas durante os estágios e em projetos de equipe com Trello.
-                            </li>
-                        </ul>
-                    </div>
+                    <section id="technologies" className="px-3 py-5 bg-card rounded-3">
+                        <div className="text-center">
+                            <div className="row justify-content-center g-4">
+                                <div className="col-md-6 col-lg-4 animate-fade-in-up delay-100">
+                                    <div className="bg-dark transition-300 hover-scale-105 shadow-sm border-0 rounded-3 h-100">
+                                        <div className="p-4">
+                                            <CodeIcon className="text-info mb-3" style={{ fontSize: 40 }} />
+                                            <h3 className="h5 fw-bold text-gray-800 mb-3">Linguagens de Programação</h3>
+                                            <ul className="list-unstyled text-gray-600 text-start ps-3">
+                                                <li>- JavaScript e TypeScript: Utilizados amplamente em projetos com React e Node.js.</li>
+                                                <li>- Java: Utilizando Spring Boot em projetos e aulas da pós-graduação.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-6 col-lg-4 animate-fade-in-up delay-200">
+                                    <div className="bg-dark transition-300 hover-scale-105 shadow-sm border-0 rounded-3 h-100">
+                                        <div className="card-body p-4">
+                                            <CodeIcon className="text-info mb-3" style={{ fontSize: 40 }} />
+                                            <h3 className="h5 fw-bold text-gray-800 mb-3">Front-end</h3>
+                                            <ul className="list-unstyled text-gray-600 text-start ps-3">
+                                                <li>- ReactJS: Utilizado no estágio e em projetos pessoais, com uso de hooks e React Router.</li>
+                                                <li>- HTML, CSS, Tailwind e Bootstrap: Aplicados no desenvolvimento de interfaces modernas e responsivas.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-6 col-lg-4 animate-fade-in-up delay-300">
+                                    <div className="bg-dark transition-300 hover-scale-105 shadow-sm border-0 rounded-3 h-100">
+                                        <div className="card-body p-4">
+                                            <CodeIcon className="text-info mb-3" style={{ fontSize: 40 }} />
+                                            <h3 className="h5 fw-bold text-gray-800 mb-3">Back-end</h3>
+                                            <ul className="list-unstyled text-gray-600 text-start ps-3">
+                                                <li>- Node.js e Express: Experiência prática no desenvolvimento de APIs REST com autenticação e middlewares.</li>
+                                                <li>- Sequelize ORM: Utilizado para manipulação de banco de dados com PostgreSQL e MySQL.</li>
+                                                <li>- Spring Boot: Utilizado para desenvolvimento de APIs REST com Java.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* Bancos de Dados */}
+                                <div className="col-md-6 col-lg-4 animate-fade-in-up delay-400">
+                                    <div className="bg-dark transition-300 hover-scale-105 shadow-sm border-0 rounded-3 h-100">
+                                        <div className="card-body p-4">
+                                            <CodeIcon className="text-info mb-3" style={{ fontSize: 40 }} />
+                                            <h3 className="h5 fw-bold text-gray-800 mb-3">Bancos de Dados</h3>
+                                            <ul className="list-unstyled text-gray-600 text-start ps-3">
+                                                <li>- PostgreSQL e MySQL: Utilizados em sistemas acadêmicos e projetos pessoais.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-6 col-lg-4 animate-fade-in-up delay-500">
+                                    <div className="bg-dark transition-300 hover-scale-105 shadow-sm border-0 rounded-3 h-100">
+                                        <div className="card-body p-4">
+                                            <CodeIcon className="text-info mb-3" style={{ fontSize: 40 }} />
+                                            <h3 className="h5 fw-bold text-gray-800 mb-3">Versionamento</h3>
+                                            <ul className="list-unstyled text-gray-600 text-start ps-3">
+                                                <li>- Git, GitHub e GitLab: Controle de versão e colaboração em todos os projetos realizados.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-6 col-lg-4 animate-fade-in-up delay-600">
+                                    <div className="bg-dark transition-300 hover-scale-105 shadow-sm border-0 rounded-3 h-100">
+                                        <div className="card-body p-4">
+                                            <CodeIcon className="text-info mb-3" style={{ fontSize: 40 }} />
+                                            <h3 className="h5 fw-bold text-gray-800 mb-3">Metodologias Ágeis</h3>
+                                            <ul className="list-unstyled text-gray-600 text-start ps-3">
+                                                <li>- Scrum e Kanban: Práticas aplicadas durante os estágios e em projetos de equipe com Trello.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </motion.section>
 
 
@@ -119,10 +184,17 @@ function App() {
                     transition={{duration: 0.6}}
                 >
                     <h2>Contate-me</h2>
-                    <p>Email: serrano.lucas@academico.ifpb.edu.br</p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/lucas-henrique-serrano-soares-382339248/">Meu
-                        LinkedIn</a></p>
-                    <p>Github: <a href="https://github.com/lucashss88">Meu Github</a></p>
+                    <p className="fs-5">Email: serrano.lucas@academico.ifpb.edu.br</p>
+                    <p className="fs-5">
+                        <a href="https://www.linkedin.com/in/lucas-henrique-serrano-soares/" target="_blank" rel="noopener noreferrer" className="link-footer d-flex align-items-center justify-content-center">
+                            <LinkedInIcon className="me-2" /> Meu LinkedIn
+                        </a>
+                    </p>
+                    <p className="fs-5">
+                        <a href="https://github.com/lucashss88" target="_blank" rel="noopener noreferrer" className="link-footer d-flex align-items-center justify-content-center">
+                            <GitHubIcon className="me-2" /> Meu Github
+                        </a>
+                    </p>
                 </motion.section>
             </div>
             <footer className="text-center p-3 bg-dark text-white mb-0 position-relative">

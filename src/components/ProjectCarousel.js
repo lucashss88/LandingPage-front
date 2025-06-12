@@ -101,7 +101,7 @@ const ProjectCarousel = () => {
                 key={currentProject}
             >
                 <motion.div
-                    className="project-card active"
+                    className="project-card active transition-300"
                     onClick={() => openPopup(currentProject)}
                     whileHover={{ scale: 1.02 }}
                 >
