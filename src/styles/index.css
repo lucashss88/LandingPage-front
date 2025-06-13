@@ -62,23 +62,46 @@ section {
   content: url('../assets/images/tech2025_inv3@4x.png');
 }
 
+.main {
+  padding-inline: 7%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.email{
+  font-size: 18px;
+}
+
 @media (max-width: 768px) {
   .img_banner {
     content: url('../assets/images/tech2025_mobile3@4x.png'); /* Caminho da imagem mobile */
     max-height: 180px;
   }
+  .img_profile{
+    width: 80px;
+  }
+
+  .main {
+    margin: 0;
+    padding-inline: 0;
+  }
+
+  .email{
+    font-size: 14px;
+  }
+
+  .tech{
+    padding: 0;
+    padding-inline: 5px;
+  }
 }
 
 .img_profile{
-  width: 10%;
-  max-width: 200px;
+  max-width: 150px;
   border: 3px solid #61dafb;
-}
-
-@media (max-width: 768px) {
-  .img_profile{
-    width: 20%;
-  }
 }
 
 .about {
@@ -98,27 +121,8 @@ section {
 .about p,
 .projects p,
 .contact p {
-  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-}
-
-.list_tec ul{
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding-left: 0;
-}
-
-.list_tec li{
-  text-decoration: none;
-  cursor: crosshair;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-left: 4px solid #61dafb;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 5px;
 }
 
 .icons {

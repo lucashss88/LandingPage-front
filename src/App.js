@@ -22,7 +22,7 @@ function App() {
                 {/* eslint-disable-next-line jsx-a11y/alt-text */}
                 <img className="img_banner" alt="Banner"/>
             </header>
-            <div className="px-3 px-md-5 text-white">
+            <div className="main text-white">
                 <motion.section
                     className="about animate-scale-in"
                     id="sobre-mim"
@@ -91,7 +91,7 @@ function App() {
                     >
                         <h2>Habilidades e tecnologias</h2>
                     </motion.div>
-                    <section id="technologies" className="px-3 py-5 bg-card rounded-3">
+                    <section id="technologies" className="tech bg-card rounded-3">
                         <div className="text-center">
                             <div className="row justify-content-center g-4">
                                 <div className="col-md-6 col-lg-4 animate-fade-in-up delay-100">
@@ -184,7 +184,7 @@ function App() {
                     transition={{duration: 0.6}}
                 >
                     <h2>Contate-me</h2>
-                    <p className="fs-5">Email: serrano.lucas@academico.ifpb.edu.br</p>
+                    <p className="email">Email: serrano.lucas@academico.ifpb.edu.br</p>
                     <p className="fs-5">
                         <a href="https://www.linkedin.com/in/lucas-henrique-serrano-soares/" target="_blank" rel="noopener noreferrer" className="link-footer d-flex align-items-center justify-content-center">
                             <LinkedInIcon className="me-2" /> Meu LinkedIn
