@@ -1,4 +1,3 @@
-/* src/App.css */
 body {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #f1f1f1;
@@ -6,10 +5,11 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 #header {
-  background: linear-gradient(90deg, #214243, #55f1ec); /* Verde azulado */
+  background: linear-gradient(90deg, #214243, #55f1ec);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,6 +62,21 @@ section {
   content: url('../assets/images/tech2025_inv3@4x.png');
 }
 
+.div-img-banner {
+  animation: pulsar-border 1.5s infinite;
+}
+
+.img-navbar {
+  width: 4rem;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.1s;
+}
+
+.img-navbar:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .main {
   padding-inline: 7%;
   margin: 0 auto;
@@ -75,9 +90,34 @@ section {
   font-size: 18px;
 }
 
+.home {
+  height: 88vh;
+  width: 100%;
+}
+
+#sobre-mim-section {
+  z-index: 0;
+  height: 100%;
+}
+
+#sobre-mim-section::before {
+  content: '';
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/images/background3@4x.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  z-index: -1;
+}
+
 @media (max-width: 768px) {
   .img_banner {
-    content: url('../assets/images/tech2025_mobile3@4x.png'); /* Caminho da imagem mobile */
+    content: url('../assets/images/tech2025_mobile3@4x.png');
     max-height: 180px;
   }
   .img_profile{
@@ -97,11 +137,21 @@ section {
     padding: 0;
     padding-inline: 5px;
   }
+
+  .home {
+    height: 70vh;
+  }
 }
 
 .img_profile{
   max-width: 150px;
   border: 3px solid #61dafb;
+  transition: all 0.6s ease-in-out;
+  transition-delay: 0.1s;
+}
+
+.img_profile:hover{
+  transform: scale(1.1);
 }
 
 .about {
@@ -131,14 +181,54 @@ section {
 
 .icon {
   text-decoration: none;
-  color: white;
+  color: #61dafb;
 }
 
 .icon:hover {
-  border-bottom: 2px solid #61dafb;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.icon-inicio {
+  text-decoration: none;
+  color: white;
+}
+
+.icon-inicio:hover {
   color: #61dafb;
   text-decoration: none;
   cursor: pointer;
+}
+
+.btn-home {
+  background-color: #61dafb;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.1s;
+  animation: pulsar 1.5s infinite;
+}
+
+.btn-home:hover {
+  background-color: white;
+  color: #2c5364;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.text-container h1, .text-container h5 {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.text-container h5 {
+  animation-delay: 0.2s; /* O h5 começará a animação 0.2s depois do h1 */
+}
+
+.title-name {
+  color: #61dafb;
 }
 
 a {
@@ -168,7 +258,6 @@ a:hover {
   transition: all 0.3s ease-in-out;
 }
 
-/* Animações */
 @keyframes fade-in-down {
   from {
     opacity: 0;
@@ -202,6 +291,41 @@ a:hover {
   }
 }
 
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulsar-border {
+  0% {
+    box-shadow: 0 0 5px #61dafb;
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(178, 17, 214, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 5px rgb(163, 0, 255);
+  }
+}
+
+@keyframes pulsar {
+  0% {
+    box-shadow: 0 0 5px #61dafb;
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(178, 17, 214, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 5px rgb(163, 0, 255);
+  }
+}
+
 .animate-fade-in-down {
   animation: fade-in-down 1s ease-out forwards;
 }
@@ -214,7 +338,6 @@ a:hover {
   animation: scale-in 0.8s ease-out forwards;
 }
 
-/* Atrasos para animações em cascata */
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; }
@@ -222,12 +345,10 @@ a:hover {
 .delay-500 { animation-delay: 0.5s; }
 .delay-600 { animation-delay: 0.6s; }
 
-/* Altura mínima para seções */
 .min-vh-100-minus-navbar {
-  min-height: calc(100vh - 80px); /* Ajuste baseado na altura da sua navbar */
+  min-height: calc(100vh - 80px);
 }
 
-/* Efeito de escala no hover para cards */
 .hover-scale-105:hover {
   transform: scale(1.02);
 }
