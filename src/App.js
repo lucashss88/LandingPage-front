@@ -11,6 +11,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WorkIcon from '@mui/icons-material/Work';
 import CodeIcon from '@mui/icons-material/Code';
+import {Link} from "react-scroll";
+import DownloadCV from "./components/DownloadCV";
 
 function App() {
 
@@ -18,22 +20,21 @@ function App() {
     return (
         <div className="App">
             <Navbar/>
-            <div className="home container-fluid d-flex flex-column justify-content-center align-items-center"
-                 id="home">
+            <div className="home container-fluid d-flex flex-column justify-content-center align-items-center" id="home">
                 <div className="text-center text-container text-white">
                     <div className="d-flex justify-content-center gap-2">
                         <h1>Oi, Eu me chamo</h1>
                         <div className="title-name">
                             <h1>Lucas</h1>
                         </div>
-
-
                     </div>
                     <h5>Desenvolvedor full stack transformando ideias em projetos.</h5>
                 </div>
                 <div className="d-flex justify-content-center gap-4 w-100" style={{marginTop: '20px'}}>
-                    <button className="btn-home">Projetos</button>
-                    <button className="btn-home">Baixar CV</button>
+                    <button className="btn-home"><Link to="projetos" smooth={true} duration={500} className="icon-btn cursor-pointer">
+                        Projetos
+                    </Link></button>
+                    <DownloadCV />
                 </div>
             </div>
             <div id="header" className="text-center p-5 mb-2 div-img-banner" style={{borderBottom: '3px solid #61dafb'}}>

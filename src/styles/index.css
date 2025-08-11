@@ -95,26 +95,6 @@ section {
   width: 100%;
 }
 
-#sobre-mim-section {
-  z-index: 0;
-  height: 100%;
-}
-
-#sobre-mim-section::before {
-  content: '';
-  position: absolute;
-  top: 55px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../assets/images/background3@4x.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.4;
-  z-index: -1;
-}
-
 @media (max-width: 768px) {
   .img_banner {
     content: url('../assets/images/tech2025_mobile3@4x.png');
@@ -139,7 +119,15 @@ section {
   }
 
   .home {
-    height: 70vh;
+    height: 50vh;
+  }
+
+  .home h1, .home h5 {
+    font-size: 1rem;
+  }
+
+  .icon-btn {
+    font-size: 1rem;
   }
 }
 
@@ -201,6 +189,16 @@ section {
   cursor: pointer;
 }
 
+.icon-btn {
+  color: black;
+  text-decoration: none;
+}
+
+.icon-btn:hover {
+  color: #2c5364;
+  text-decoration: none;
+}
+
 .btn-home {
   background-color: #61dafb;
   color: black;
@@ -224,7 +222,7 @@ section {
 }
 
 .text-container h5 {
-  animation-delay: 0.2s; /* O h5 começará a animação 0.2s depois do h1 */
+  animation-delay: 0.2s;
 }
 
 .title-name {
@@ -256,6 +254,35 @@ a:hover {
 
 .transition-300 {
   transition: all 0.3s ease-in-out;
+}
+
+.navMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+  gap: 1rem;
+  background-color: rgb(17, 17, 17, 0.7);
+  backdrop-filter: blur(40px);
+  z-index: 1000;
+  padding: 100px 0 0;
+  list-style: none;
+  font-size: 2.5rem;
+}
+
+.navIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 4rem;
+  gap: 1rem;
 }
 
 @keyframes fade-in-down {
