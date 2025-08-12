@@ -1,71 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/ProjectCarousel.css';
-import nt from '../assets/images/Captura de tela 2024-09-13 142836.png';
-import ntPopup from '../assets/images/Captura de tela 2024-08-19 114610.png';
-import ntPopup2 from '../assets/images/Captura de tela 2024-10-09 102057.png';
-import gf from '../assets/images/Captura de tela 2025-04-01 152504.png';
-import gymfit from '../assets/images/Captura de tela 2024-10-14 202747.png';
-import gymfit2 from '../assets/images/Captura de tela 2024-10-14 202804.png';
-import sf from '../assets/images/Captura de tela 2025-04-29 114635.png';
-import studyflow from '../assets/images/Captura de tela 2025-04-29 114729.png';
-import studyflow2 from '../assets/images/Captura de tela 2025-04-29 114754.png';
-
-const projects = [
-    {
-        id: 1,
-        title: 'Nutritrack',
-        description: 'O NutriTrack é um sistema desenvolvido para auxiliar nutricionistas e pacientes no gerenciamento de' +
-            ' dietas e informações nutricionais. Permite o cadastro de alimentos, criação de dietas personalizadas, substituição de refeições e visualização detalhada por parte dos pacientes.\n' +
-            '\n' +
-            'Tecnologias: React (Router, Hooks), Tailwind, Node.js, Express, JWT, PostgreSQL (Sequelize).\n' +
-            '\n' +
-            'Repositórios:\n' +
-            '- Frontend:\n' +
-            '- Backend:\n' +
-            '- Vídeo com simulacão: ',
-        image: nt,
-        imagePopup: ntPopup,
-        imagePopup2: ntPopup2,
-        simulacao: 'https://www.loom.com/share/fc900a72af774674bcccf63eb80867fb?sid=4fcf993f-7505-42cd-8d86-559f1d3cc75e',
-        // deployLink: 'https://nutri-track-front.vercel.app'
-    },
-    {
-        id: 2,
-        title: 'FitTrack',
-        description: 'O FitTrack é uma plataforma web/mobile para organização de treinos e atividades físicas, com criação de treinos personalizados e edição de perfil.\n' +
-            '\n' +
-            'Tecnologias: React (Router, Hooks), Tailwind CSS, Node.js, Express, JWT, PostgreSQL (Sequelize).\n'+
-            '\n' +
-            'Repositórios:\n' +
-            '- Frontend:\n' +
-            '- Backend:\n' +
-            '- Vídeo com simulacão: ',
-        image: gf,
-        imagePopup: gymfit,
-        imagePopup2: gymfit2,
-        simulacao: 'https://www.loom.com/share/a875df19bae04ad8a7ea37159a76c68a',
-        // deployLink: 'https://gym-prive-front.vercel.app'
-    },
-    {
-        id: 3,
-        title: 'StudyFlow',
-        description: 'O StudyFlow é uma aplicação web para organização de estudos, com foco em produtividade e acompanhamento de atividades.\n' +
-            'Permite cadastro de disciplinas, controle de tempo por atividade (cronômetro), visualização gráfica do desempenho, e autenticação de usuários.\n' +
-            '\n' +
-            'Tecnologias: React (Router, Hooks), Bootstrap 5.3, Node.js, Express, JWT, Sequelize (SQLite).\n' +
-            '\n' +
-            'Repositórios:\n' +
-            '- Frontend:\n' +
-            '- Backend:\n' +
-            '- Vídeo com simulacão: ',
-        image: sf,
-        imagePopup: studyflow,
-        imagePopup2: studyflow2,
-        simulacao: ' https://www.loom.com/share/9429088703f246308c1618b4763fc694?sid=176aeba1-0db9-44fb-bde3-c61835bf08d2',
-        // deployLink: 'https://studyflow.vercel.app'
-    },
-];
+import {projects} from './Projects';
 
 const ProjectCarousel = () => {
     const [currentProject, setCurrentProject] = useState(0);
@@ -133,8 +69,13 @@ const ProjectCarousel = () => {
                         <h3>{projects[currentProject].title}</h3>
                         <div className="div_project">
                             <div className="div_project_img">
-                                <img src={projects[currentProject].imagePopup} alt="Imagem do Projeto" />
-                                <img src={projects[currentProject].imagePopup2} alt="Imagem do Projeto" />
+                                {projects[currentProject].popupImages && projects[currentProject].popupImages.map((imagem, index) => (
+                                    <img
+                                        key={index}
+                                        src={imagem}
+                                        alt={`${projects[currentProject].title} - Imagem ${index + 1}`}
+                                    />
+                                ))}
                             </div>
                             <div className="project-description" style={{
                                 maxHeight: '160px',
@@ -145,7 +86,8 @@ const ProjectCarousel = () => {
                                 textAlign: 'center',
                                 whiteSpace: 'pre-line'
                             }}>
-                                {projects[currentProject].description}<a href={projects[currentProject].simulacao}>Link</a>
+                                {projects[currentProject].description}
+                                {/*<a href={projects[currentProject].simulacao}>Link</a>*/}
                             </div>
                         </div>
                         <button className="btn btn-danger" onClick={closePopup}>Fechar</button>

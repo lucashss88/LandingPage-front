@@ -163,6 +163,10 @@ section {
   margin-bottom: 1rem;
 }
 
+.about p {
+  text-align: justify;
+}
+
 .icons {
   margin-right: 0.5rem;
 }

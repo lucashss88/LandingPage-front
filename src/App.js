@@ -28,7 +28,7 @@ function App() {
                             <h1>Lucas</h1>
                         </div>
                     </div>
-                    <h5>Desenvolvedor full stack transformando ideias em projetos.</h5>
+                    <h5>Desenvolvedor <strong>Full stack</strong> transformando ideias em projetos.</h5>
                 </div>
                 <div className="d-flex justify-content-center gap-4 w-100" style={{marginTop: '20px'}}>
                     <button className="btn-home"><Link to="projetos" smooth={true} duration={500} className="icon-btn cursor-pointer">
@@ -69,10 +69,10 @@ function App() {
                         Tenho me capacitado como desenvolvedor full stack, com forte experiência em back-end utilizando
                         Node.js, Express e Sequelize, além de habilidades consolidadas em React para o front-end.
                         Durante minhas experiências profissionais, participei do desenvolvimento de sistemas com foco em
-                        usabilidade, performance e boas práticas ágeis, sempre colaborando em equipe.
-                        Busco oportunidades para aplicar meu conhecimento em projetos inovadores, tanto no
-                        desenvolvimento web quanto mobile, e continuar evoluindo como profissional da área de
-                        tecnologia.
+                        usabilidade, performance e boas práticas ágeis, sempre colaborando em equipe. <br></br> Atualmente como bolsista
+                        de estágio na Compass UOL, busco aplicar meus conhecimentos em arquiteturas modernas e metodologias ágeis
+                        para colaborar na construção de soluções escaláveis e de alto desempenho
+
 
                     </p>
                     <motion.div
@@ -138,12 +138,9 @@ function App() {
                                             <CodeIcon className="text-info mb-3" style={{fontSize: 40}}/>
                                             <h3 className="h5 fw-bold text-gray-800 mb-3">Linguagens de Programação</h3>
                                             <ul className="list-unstyled text-gray-600 text-start ps-3">
-                                                <li>- JavaScript e TypeScript: Utilizados amplamente em projetos com
-                                                    React e Node.js.
-                                                </li>
-                                                <li>- Java: Utilizando Spring Boot em projetos e aulas da
-                                                    pós-graduação.
-                                                </li>
+                                                <li>- JavaScript</li>
+                                                <li>- TypeScript</li>
+                                                <li>- Java</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -155,12 +152,10 @@ function App() {
                                             <CodeIcon className="text-info mb-3" style={{fontSize: 40}}/>
                                             <h3 className="h5 fw-bold text-gray-800 mb-3">Front-end</h3>
                                             <ul className="list-unstyled text-gray-600 text-start ps-3">
-                                                <li>- ReactJS: Utilizado no estágio e em projetos pessoais, com uso de
-                                                    hooks e React Router.
-                                                </li>
-                                                <li>- HTML, CSS, Tailwind e Bootstrap: Aplicados no desenvolvimento de
-                                                    interfaces modernas e responsivas.
-                                                </li>
+                                                <li>- ReactJS & Vite</li>
+                                                <li>- VueJS</li>
+                                                <li>- HTML & CSS</li>
+                                                <li>- Tailwind e Bootstrap</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -172,15 +167,9 @@ function App() {
                                             <CodeIcon className="text-info mb-3" style={{fontSize: 40}}/>
                                             <h3 className="h5 fw-bold text-gray-800 mb-3">Back-end</h3>
                                             <ul className="list-unstyled text-gray-600 text-start ps-3">
-                                                <li>- Node.js e Express: Experiência prática no desenvolvimento de APIs
-                                                    REST com autenticação e middlewares.
-                                                </li>
-                                                <li>- Sequelize ORM: Utilizado para manipulação de banco de dados com
-                                                    PostgreSQL e MySQL.
-                                                </li>
-                                                <li>- Spring Boot: Utilizado para desenvolvimento de APIs REST com
-                                                    Java.
-                                                </li>
+                                                <li>- Node.js & Express</li>
+                                                <li>- Sequelize ORM</li>
+                                                <li>- Spring Boot</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -192,9 +181,9 @@ function App() {
                                             <CodeIcon className="text-info mb-3" style={{fontSize: 40}}/>
                                             <h3 className="h5 fw-bold text-gray-800 mb-3">Bancos de Dados</h3>
                                             <ul className="list-unstyled text-gray-600 text-start ps-3">
-                                                <li>- PostgreSQL e MySQL: Utilizados em sistemas acadêmicos e projetos
-                                                    pessoais.
-                                                </li>
+                                                <li>- PostgreSQL</li>
+                                                <li>- MySQL</li>
+                                                <li>- MongoDB</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -206,9 +195,9 @@ function App() {
                                             <CodeIcon className="text-info mb-3" style={{fontSize: 40}}/>
                                             <h3 className="h5 fw-bold text-gray-800 mb-3">Versionamento</h3>
                                             <ul className="list-unstyled text-gray-600 text-start ps-3">
-                                                <li>- Git, GitHub e GitLab: Controle de versão e colaboração em todos os
-                                                    projetos realizados.
-                                                </li>
+                                                <li>- Git</li>
+                                                <li>- Github</li>
+                                                <li>- Gitlab</li>
                                             </ul>
                                         </div>
                                     </div>
@@ -220,9 +209,9 @@ function App() {
                                             <CodeIcon className="text-info mb-3" style={{fontSize: 40}}/>
                                             <h3 className="h5 fw-bold text-gray-800 mb-3">Metodologias Ágeis</h3>
                                             <ul className="list-unstyled text-gray-600 text-start ps-3">
-                                                <li>- Scrum e Kanban: Práticas aplicadas durante os estágios e em
-                                                    projetos de equipe com Trello.
-                                                </li>
+                                                <li>- Scrum & Kanban</li>
+                                                <li>- Trello</li>
+                                                <li>- Jira</li>
                                             </ul>
                                         </div>
                                     </div>

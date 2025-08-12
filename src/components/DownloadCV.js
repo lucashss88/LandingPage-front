@@ -1,5 +1,5 @@
 import React from 'react';
-import MyCV from '../assets/cv/curriculo_2025.5.1.pdf';
+import MyCV from '../assets/cv/CV_lucashss.pdf';
 
 function DownloadCV() {
     return (
